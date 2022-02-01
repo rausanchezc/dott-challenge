@@ -5,7 +5,7 @@ export class Metadata {
 
     private constructor(nTests: number, n: number, m: number) {
 
-        if (n <= 1 || m <= 1) throw Error('n,m should be greater than 0');
+        if (n < 1 || m < 1) throw Error('n,m should be greater than 0');
         if (nTests <= 0) throw Error('# of tests should be a positive number');
 
         this._nTests = nTests;

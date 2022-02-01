@@ -1,10 +1,11 @@
 import {DistanceMatrix} from "../domains";
 import {OutputWriter} from "./OutputWriter";
+import {Writable} from "stream";
 
 export class ChallengeOutputWriter implements OutputWriter<DistanceMatrix> {
-    private _output: NodeJS.WriteStream;
+    private _output: Writable;
 
-    constructor(output: NodeJS.WriteStream) {
+    constructor(output: Writable) {
         this._output = output;
         this.setup();
     }
@@ -18,7 +19,7 @@ export class ChallengeOutputWriter implements OutputWriter<DistanceMatrix> {
     }
 
     private setup(): void {
-        this._output.setEncoding('utf-8');
+        this._output.setDefaultEncoding('utf-8');
     }
     
 }

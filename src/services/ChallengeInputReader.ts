@@ -1,12 +1,13 @@
 import { InputReader } from "./InputReader";
 import { Bitmap, ChallengeInput, Metadata } from "../domains";
 import { EOL } from "os";
+import { Readable } from "stream";
 
 export class ChallengeInputReader implements InputReader<ChallengeInput> {
 
-    private input: NodeJS.ReadStream;
+    private input: Readable;
 
-    constructor(input: NodeJS.ReadStream) {
+    constructor(input: Readable) {
         this.input = input;
         this.setup();
     }

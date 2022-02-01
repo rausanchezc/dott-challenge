@@ -6,9 +6,24 @@ export class DistanceMatrix {
     private readonly _m: number;
 
     constructor(n: number, m: number, matrix: number[][]) {
+
+        if (n < 0 || m < 0) throw Error('Negative numbers are disallowed for n, m');
+
         this._matrix = matrix;
         this._n = n;
         this._m = m;
+    }
+
+    get n() {
+        return this._n;
+    }
+
+    get m() {
+        return this._m;
+    }
+
+    get matrix() {
+        return this._matrix;
     }
 
     stringify(): string {
