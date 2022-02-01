@@ -10,6 +10,9 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
-    "no-console":1
+    "no-console":1,
+    "key-spacing": "warn",
+    "space-in-parens": "warn",
+    "object-curly-spacing": ["error", "never"]
   }
 }
