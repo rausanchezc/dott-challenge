@@ -14,7 +14,7 @@ export class ChallengeOutputWriter implements OutputWriter<DistanceMatrix> {
         const that = this;
 
         new Promise<void>( function (resolve) {
-            that._output.write(data.stringify(), () => {resolve()})
+            that._output.write(`${data.stringify()}\n`, () => {resolve()})
         });
     }
 
