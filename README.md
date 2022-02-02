@@ -17,6 +17,16 @@ There is a set of utility scripts defined in the `package.json` file thought for
 
 Please feel free to check them out. `;-)`  
 
+# How to execute a basic example
+1. First, the project should be transpiled by running the command: 
+```bash
+> npm run build
+```
+2. The example can be run by running the command: 
+```bash
+> cat resources/sample.txt | npm run start
+```
+
 # How to run the test suite
 The suite of tests can be executed by running the command `npm run test`
 
